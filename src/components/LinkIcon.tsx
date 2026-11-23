@@ -1,6 +1,13 @@
 import type { ReactNode } from "react";
 
-export type IconName = "instagram" | "youtube" | "blog" | "github" | "linkedin" | "link";
+export type IconName =
+  | "instagram"
+  | "youtube"
+  | "blog"
+  | "github"
+  | "linkedin"
+  | "email"
+  | "link";
 
 type Props = {
   name: IconName;
@@ -59,6 +66,12 @@ const paths: Record<IconName, ReactNode> = {
       <circle cx="8" cy="7.5" r="0.6" fill="currentColor" />
       <path d="M12 16v-5.5" />
       <path d="M12 13a2.5 2.5 0 0 1 5 0v3" />
+    </>
+  ),
+  email: (
+    <>
+      <rect x="3" y="5" width="18" height="14" rx="2.5" />
+      <path d="M3.5 6.5l8.5 6.5 8.5-6.5" />
     </>
   ),
   link: (

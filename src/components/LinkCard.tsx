@@ -17,11 +17,13 @@ function recordClick(id: string) {
 }
 
 export default function LinkCard({ id, title, url, icon = "link" }: Props) {
+  // mailto: 같은 링크는 새 탭으로 열면 빈 탭만 남으므로, 웹 주소만 새 탭으로 연다.
+  const isWeb = /^https?:\/\//.test(url);
   return (
     <a
       href={url}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isWeb ? "_blank" : undefined}
+      rel={isWeb ? "noopener noreferrer" : undefined}
       onClick={() => recordClick(id)}
       className="flex w-full items-center gap-3 rounded-2xl border border-neutral-200 bg-white px-5 py-4 font-semibold shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-500 hover:bg-emerald-50 hover:shadow-md active:translate-y-0 active:bg-emerald-100 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:active:bg-neutral-700"
     >

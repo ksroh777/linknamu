@@ -19,12 +19,17 @@ export type Profile = {
 // TODO: 아래는 화면 확인용 더미 값입니다. 진짜 내용으로 교체하세요.
 // 프로필 사진은 public/ 폴더에 넣고 image 경로를 바꾸면 됩니다 (예: "/profile.jpg").
 export const profile: Profile = {
-  name: "홍길동",
-  bio: "한 줄 소개가 들어갈 자리입니다",
-  image: "/profile-placeholder.svg",
+  name: "노경식",
+  bio: "로봇 관련 개발, 사업 : 요즘은 Physical AI에 관심이 많아요!",
+  image: "/profile.jpg",
   links: [
-    { id: "github", title: "GitHub", url: "https://github.com/", icon: "github" },
-    { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com/", icon: "linkedin" },
-    { id: "blog", title: "Blog", url: "https://example.com/", icon: "blog" },
+    { id: "github", title: "GitHub", url: "https://github.com/ksroh777", icon: "github" },
+    { id: "email", title: "이메일", url: "mailto:ksroh777@gmail.com", icon: "email" },
+    {
+      id: "linkedin",
+      title: "LinkedIn",
+      url: "https://www.linkedin.com/in/경식-노-30b40075",
+      icon: "linkedin",
+    },
   ],
 };
